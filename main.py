@@ -47,31 +47,32 @@ class bounce():
                 sys.stdout.flush()
                 time.sleep(1. / 10)
         def logo():
-            init(autoreset=True)
-            from random import choice
+            fg = [
+    '\033[91;1m',  # RED     0
+    '\033[92;1m',  # GREEN   1
+    '\033[93;1m',  # YELLOW  2
+    '\033[94;1m',  # BLUE    3
+    '\033[95;1m',  # MAGENTA 4
+    '\033[96;1m',  # CYAN    5
+    '\033[97;1m'  # WHITE   6
+                ]
             os.system('cls')
-            clear = "\x1b[0m"
-            colors = [36, 32, 34, 35, 31, 37]
+            print('''
+                                {2} ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+                                {2} ┃                {0}▄  █▀▄▀█ ██   █▄▄▄▄    ▄   ▄███▄   █               {2}┃
+                                {2} ┃            {0}▀▄   █ █ █ █ █ █  █  ▄▀     █  █▀   ▀  █               {2}┃
+                                {2} ┃              {0}█ ▀  █ ▄ █ █▄▄█ █▀▀▌ █     █ ██▄▄    █               {2}┃  
+                                {2} ┃             {0}▄ █   █   █ █  █ █  █  █    █ █▄   ▄▀ ███▄            {2}┃
+                                {2} ┃            {0}█   ▀▄    █     █   █    █  █  ▀███▀       ▀           {2}┃
+                                {2} ┃             {0}▀       ▀     █   ▀      █▐                           {2}┃
+                                {2} ┃                          {0}▀           ▐                            {2}┃
+                                {2} ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+                                {2} ┃         {0}Bounce Checker v2.0       {2}┃         {0}CODED BY xMarvel      {2}┃
+                                {2} ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛ 
 
-            x = """ 
-
-                        ██╗  ██╗███╗   ███╗ █████╗ ██████╗ ██╗   ██╗███████╗██╗ 
-                        ╚██╗██╔╝████╗ ████║██╔══██╗██╔══██╗██║   ██║██╔════╝██║ 
-                         ╚███╔╝ ██╔████╔██║███████║██████╔╝██║   ██║█████╗  ██║ 
-                         ██╔██╗ ██║╚██╔╝██║██╔══██║██╔══██╗╚██╗ ██╔╝██╔══╝  ██║ 
-                        ██╔╝ ██╗██║ ╚═╝ ██║██║  ██║██║  ██║ ╚████╔╝ ███████╗███████╗
-                            ╚═╝  ╚═╝╚═╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚══════╝ 
-                                                    [+]Support: @xmarval_support [+]
-                                                    [+]Channel: @xMarvel_OfficIal[+] 
-
-                                      +-------- With Great Power Comes Great Toolz! --------+
-
-        			                  """
-            for N, line in enumerate(x.split("\n")):
-                sys.stdout.write(" \x1b[1;%dm%s%s\n " % (random.choice(colors), line, clear))
-                time.sleep(0.05)
-
+                                        '''.format(fg[0], fg[1], fg[5], fg[4]))
         logo()
+
         bl = Fore.BLACK
         wh = Fore.WHITE
         yl = Fore.YELLOW
@@ -81,7 +82,7 @@ class bounce():
         res = Style.RESET_ALL
         init(autoreset=True)
         self.mailist = input(f'{gr}  Give Me Your List{wh}/{red}root> {gr}${res} ')
-        self.thread = '200'
+        self.thread = '50'
         self.countList = len(list(open(self.mailist)))
         self.clean = 'n'
         if self.clean == 'y':
@@ -122,19 +123,19 @@ class bounce():
             if rez == 'die':
                 countall2 += 1
                 countdd += 1
-                print(Fore.CYAN + f'[Bounce Checker 1.0]' + Fore.WHITE + ' | ' + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + Fore.RED + f" | {eml} | Die  [ [ {countlive}/{count} ]")       
-                ctypes.windll.kernel32.SetConsoleTitleW(f"[Bounce Checker 1.0] [ @xMarvel_OFFiCiAL] {countall2}/{count} | Live : {countlive} Recheck :{countrec} | Die : {countdd}")
+                print(Fore.CYAN + f'[Bounce Checker 2.0]' + Fore.WHITE + ' | ' + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + Fore.RED + f" | {eml} | Die  [ [ {countlive}/{count} ]")       
+                ctypes.windll.kernel32.SetConsoleTitleW(f"[Bounce Checker 2.0] [ @xMarvel_OFFiCiAL] {countall2}/{count} | Live : {countlive} Recheck :{countrec} | Die : {countdd}")
                 self.save_to_file('die.txt', eml+'\n')
             elif rez == 'live':
                 countall2 += 1
                 countlive += 1
-                print(Fore.CYAN + f'[Bounce Checker 1.0]' + Fore.WHITE + ' | ' + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + Fore.GREEN + f" | {eml} | live  [ [ {countlive}/{count} ]")       
-                ctypes.windll.kernel32.SetConsoleTitleW(f"[Bounce Checker 1.0] {countall2}/{count} | Live : {countlive} Recheck :{countrec} | Die : {countdd}")
+                print(Fore.CYAN + f'[Bounce Checker 2.0]' + Fore.WHITE + ' | ' + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + Fore.GREEN + f" | {eml} | live  [ [ {countlive}/{count} ]")       
+                ctypes.windll.kernel32.SetConsoleTitleW(f"[Bounce Checker 2.0] {countall2}/{count} | Live : {countlive} Recheck :{countrec} | Die : {countdd}")
                 self.save_to_file('live.txt', eml+'\n')
             elif rez == 'unknown':
                 countall2 += 1
                 countdd += 1
-                print(Fore.CYAN + '[Bounce Checker 1.0]' + Fore.WHITE + ' | ' + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + Fore.RED + f" | {eml} | die [  {countdd}/{count} ]")
+                print(Fore.CYAN + '[Bounce Checker 2.0]' + Fore.WHITE + ' | ' + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + Fore.RED + f" | {eml} | die [  {countdd}/{count} ]")
                 self.save_to_file('die.txt', eml+'\n')
             else:
                 print('contact @xMarval_support')
