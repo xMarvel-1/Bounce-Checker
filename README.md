@@ -7,7 +7,7 @@ BOUNCE EMAIL VALID CHECKER ( EXE VESION FOR WINDOWS USERS + PYTHON VERSION)
 ----------
 <h2>Screenshot</h2>
 
-<img src="https://i.imgur.com/1BnauXz.png" style="max-width:100%;">
+<img src="https://i.imgur.com/wio2X4q.png" style="max-width:100%;">
 
 Installation : 
 ------
