@@ -28,9 +28,9 @@ Installation :
 ------
 You Want Ask About All My Tools Or Buy Tools Private Add Me On : 
 ```
-[+] ICQ: @xMarveL_ADMiN
-[+] Telegram : @xMarveL
+[+] ICQ: @xMarveL
+[+] Telegram : @The_Real_xMarvel
 [+]  ⚠️⚠️ Be aware Of imposter and fake accounts ! ⚠️⚠️ 
 ```
 
-<br>©2021 xMarvel
+<br>©2020 xMarvel
