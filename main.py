@@ -165,19 +165,19 @@ class bounce():
             if rez == 'die':
                 countall2 += 1
                 countdd += 1
-                print(Fore.CYAN + f'[Bounce Checker 2.0]' + Fore.WHITE + ' | ' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + Fore.RED + f" | {eml} | Die  [ [ {countlive}/{count} ]")       
-                ctypes.windll.kernel32.SetConsoleTitleW(f"[Bounce Checker 2.0] [ @xMarvel_OFFiCiAL] {countall2}/{count} | Live : {countlive} Recheck :{countrec} | Die : {countdd}")
+                print(Fore.CYAN + f'[Bounce Checker 3.0]' + Fore.WHITE + ' | ' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + Fore.RED + f" | {eml} | Die  [ [ {countlive}/{count} ]")       
+                ctypes.windll.kernel32.SetConsoleTitleW(f"[Bounce Checker 3.0] [ @xMarvel_OFFiCiAL] {countall2}/{count} | Live : {countlive} Recheck :{countrec} | Die : {countdd}")
                 self.save_to_file('die.txt', eml+'\n')
             elif rez == 'live':
                 countall2 += 1
                 countlive += 1
-                print(Fore.CYAN + f'[Bounce Checker 2.0]' + Fore.WHITE + ' | ' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + Fore.GREEN + f" | {eml} | live  [ [ {countlive}/{count} ]")       
-                ctypes.windll.kernel32.SetConsoleTitleW(f"[Bounce Checker 2.0] {countall2}/{count} | Live : {countlive} Recheck :{countrec} | Die : {countdd}")
+                print(Fore.CYAN + f'[Bounce Checker 3.0]' + Fore.WHITE + ' | ' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + Fore.GREEN + f" | {eml} | live  [ [ {countlive}/{count} ]")       
+                ctypes.windll.kernel32.SetConsoleTitleW(f"[Bounce Checker 3.0] {countall2}/{count} | Live : {countlive} Recheck :{countrec} | Die : {countdd}")
                 self.save_to_file('live.txt', eml+'\n')
             elif rez == 'unknown':
                 countall2 += 1
                 countdd += 1
-                print(Fore.CYAN + '[Bounce Checker 2.0]' + Fore.WHITE + ' | ' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + Fore.RED + f" | {eml} | die [  {countdd}/{count} ]")
+                print(Fore.CYAN + '[Bounce Checker 3.0]' + Fore.WHITE + ' | ' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + Fore.RED + f" | {eml} | die [  {countdd}/{count} ]")
                 self.save_to_file('die.txt', eml+'\n')
             else:
                 print('contact @xMarval_support')
